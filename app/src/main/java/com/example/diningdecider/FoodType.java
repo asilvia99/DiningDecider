@@ -1,5 +1,7 @@
 package com.example.diningdecider;
 
+//food
+
 public enum FoodType {
     FastFood,
     Burgers,
