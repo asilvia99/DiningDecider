@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageButton
+            android:id="@+id/wp_backbutton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:text=" "
+            android:textSize="22dp"
+            android:src = "@drawable/arrow"
+            android:scaleType="fitCenter"
+            />
+
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:src= "@drawable/dd2"
+            android:layout_alignParentRight="true"
+            />
+    </RelativeLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="2dp"
+        android:layout_marginTop="20dp"
+        tools:text="THE WINNER IS..."
+        android:textSize="50dp"
+        android:textColor="#C4421A"
+        android:layout_marginBottom="20dp"
+        />
+
+    <ImageView
+        android:id="@+id/wp_img"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginHorizontal="20dp"
+        android:src="@drawable/chickfila"
+        android:scaleType="centerCrop"
+        android:background="@android:color/white"
+
+        />
+    <TextView
+        android:id="@+id/wp_name"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:background="#F98F45"
+        android:layout_marginHorizontal="20dp"
+        tools:text="Restaurant 1"
+        android:textSize="16dp"
+        android:textColor="@android:color/white"/>
+
+
+    <!--    Layout containing Restaurant Names-->
+
+
+
+    <!--    Linear layout to contain info/favorite buttons-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal"
+        android:gravity="center"
+        >
+
+
+        <ImageButton
+            android:id="@+id/wp_infoButton1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:text=" "
+            android:textSize="22dp"
+            android:src = "@drawable/info"
+            android:scaleType="fitCenter"
+            />
+
+
+        <ImageButton
+            android:id="@+id/wp_favButton1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:text=" "
+            android:textSize="22dp"
+            android:src = "@drawable/heart"
+            android:padding="9dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="200dp"/>
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:background="@drawable/wave">
+
+        <ImageButton
+            android:id="@+id/wp_phonebutton"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:src="@drawable/phone"
+            android:scaleType="centerCrop"
+            android:background="#C4421A"
+            android:layout_marginHorizontal="10dp"
+            />
+
+
+        <ImageButton
+            android:id="@+id/wp_directionbutton"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:src="@drawable/directions"
+            android:scaleType="centerCrop"
+            android:background="#C4421A"
+            android:layout_marginHorizontal="10dp"
+            />
+
+
+        <ImageButton
+            android:id="@+id/wp_finishbutton"
+            android:layout_width="100dp"
+            android:layout_height="120dp"
+            android:src="@drawable/finish"
+            android:scaleType="centerCrop"
+            android:background="#C4421A"
+            android:layout_marginHorizontal="10dp"
+
+            />
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

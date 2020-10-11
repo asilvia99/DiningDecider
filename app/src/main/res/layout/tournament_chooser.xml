@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@android:color/white">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:padding="10dp"
+        android:layout_marginTop="20dp"
+        >
+
+        <ImageButton
+            android:id="@+id/ts_backbutton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:text=" "
+            android:textSize="22dp"
+            android:src = "@drawable/arrow"
+            android:scaleType="fitCenter"
+            />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src= "@drawable/dd2"
+            android:scaleType="fitCenter"
+            android:layout_centerHorizontal="true"
+            />
+    </RelativeLayout>
+
+
+    <TextView
+        android:id="@+id/ts_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="2dp"
+        android:layout_marginTop="20dp"
+        android:text="LET US HELP YOU DECIDE"
+        android:textSize="30dp"
+        android:textColor="#C4421A"
+        />
+    <TextView
+        android:id="@+id/ts_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="2dp"
+        android:layout_marginBottom="15dp"
+        android:text="Select the restaurant that you prefer"
+        android:textSize="16dp"
+        android:textColor="#C4421A"
+        />
+
+
+    <!--    Layout containing restaurant photos-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal">
+
+
+        <ImageButton
+            android:id="@+id/ts_img1"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/chickfila"
+            android:scaleType="centerCrop"
+            android:background="@android:color/black"
+
+            />
+
+        <ImageButton
+            android:id="@+id/ts_img2"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginHorizontal="20dp"
+            android:src="@drawable/chipotle"
+            android:scaleType="centerCrop"
+            android:background="@android:color/black"
+            />
+    </LinearLayout>
+
+
+    <!--    Layout containing Restaurant Names-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal">
+
+        <TextView
+            android:id="@+id/ts_name1"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="#F98F45"
+            android:layout_marginHorizontal="20dp"
+            tools:text="Restaurant 1"
+            android:textSize="16dp"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/ts_name2"
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:background="#F98F45"
+            android:layout_marginHorizontal="20dp"
+            tools:text="Restaurant 2"
+            android:textSize="16dp"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+
+
+    <!--    Linear layout to contain info/favorite buttons-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation = "horizontal"
+        android:gravity="center"
+        >
+
+
+        <ImageButton
+            android:id="@+id/ts_infoButton1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:text=" "
+            android:textSize="22dp"
+            android:src = "@drawable/info"
+            android:scaleType="fitCenter"
+            />
+
+
+        <ImageButton
+            android:id="@+id/ts_favButton1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:text=" "
+            android:textSize="22dp"
+            android:src = "@drawable/heart"
+            android:padding="9dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="50dp"/>
+
+        <ImageButton
+            android:id="@+id/ts_infoButton2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:text=" "
+            android:textSize="22dp"
+            android:src = "@drawable/info"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="50dp"/>
+        />
+
+
+        <ImageButton
+            android:id="@+id/ts_favButton2"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:background="@android:color/white"
+            android:text=" "
+            android:textSize="22dp"
+            android:src = "@drawable/heart"
+            android:padding="9dp"
+            android:scaleType="fitCenter"
+            android:layout_marginLeft="50dp"/>
+        />
+
+    </LinearLayout>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:src= "@drawable/wave"
+        android:scaleType="fitXY"
+
+        android:layout_marginTop="40dp"
+        />
+</LinearLayout>
