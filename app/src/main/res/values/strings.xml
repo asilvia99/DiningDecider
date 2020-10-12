@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">DiningDecider</string>
+    <color name="orange">#C4421A</color>
+    <color name="blue">#97CECC</color>
 </resources>
