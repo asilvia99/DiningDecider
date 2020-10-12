@@ -82,6 +82,7 @@
             android:layout_height="150dp"
             android:layout_marginHorizontal="20dp"
             android:src="@drawable/chipotle"
+            android:text="Restaurant 1"
             android:scaleType="centerCrop"
             />
     </LinearLayout>

@@ -33,8 +33,9 @@
         app:layout_constraintHorizontal_bias="0.912"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.012"
-        app:srcCompat="@drawable/logo" />
+        app:layout_constraintVertical_bias="0.012"/>
+<!--        app:srcCompat="@drawable/logo" -->
+
 
     <TextView
         android:id="@+id/DINING"
@@ -115,8 +116,9 @@
         app:layout_constraintHorizontal_bias="0.504"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.64"
-        app:srcCompat="@drawable/background" />
+        app:layout_constraintVertical_bias="0.64"/>
+<!--        app:srcCompat="@drawable/background" -->
+
 
     <TextView
         android:id="@+id/RestaurantName"

@@ -7,6 +7,8 @@ import android.os.Bundle
 import android.view.View
 import android.widget.ImageButton
 import android.widget.TextView
+import com.google.gson.Gson
+
 private const val request_code=0
 
 
@@ -89,10 +91,10 @@ class MainActivity : AppCompatActivity() {
              * show winner screen
              */
             if (r == this.tournament.rounds.size -1){
-
                 val intent = Intent(this, WinnerPage::class.java)
-                val outState = Bundle()
-//                outState.put
+                val gson = Gson()
+                val json = gson.toJson(winner)
+                intent.putExtra("Restaurant", json)
                 startActivity(intent)
             }
             /**
