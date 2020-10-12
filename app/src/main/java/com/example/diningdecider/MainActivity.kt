@@ -91,7 +91,9 @@ class MainActivity : AppCompatActivity() {
             if (r == this.tournament.rounds.size -1){
 
                 val intent = Intent(this, WinnerPage::class.java)
-                startActivityForResult(intent, request_code)
+                val outState = Bundle()
+//                outState.put
+                startActivity(intent)
             }
             /**
              * if its the final match but there are more rounds,
