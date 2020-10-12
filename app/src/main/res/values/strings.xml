@@ -1,5 +1,20 @@
 <resources>
     <string name="app_name">DiningDecider</string>
+    <string name="filter_title">INPUT YOUR FILTERS</string>
+    <string name="distance_heading">Distance: 10</string>
+    <string name="price_heading">Price</string>
+    <string name="category_heading">Categories</string>
+    <string name="random_choose">CHOOSE FOR ME</string>
+    <string name="tournament_choose">HELP ME DECIDE</string>
+    <string name="chinese_category">Chinese</string>
+    <string name="mexican_category">Mexican</string>
+    <string name="indian_category">Indian</string>
+    <string name="thai_category">Thai</string>
+    <string name="fast_category">Fast Food</string>
+    <string name="breakfast_category">Breakfast</string>
+    <string name="seafood_category">Seafood</string>
+    <string name="burgers_category">Burgers</string>
+    <string name="buffet_category">Buffet</string>
     <color name="orange">#C4421A</color>
     <color name="blue">#97CECC</color>
 </resources>
