@@ -1,12 +1,11 @@
 package com.example.diningdecider
 
-import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 
-class WinnerActivity : AppCompatActivity() {
-
+class WinnerPage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.winner_page)
+        setContentView(R.layout.activity_winner_page)
     }
 }

@@ -1,6 +1,7 @@
 package com.example.diningdecider
 
 import android.content.Intent
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -89,7 +90,7 @@ class MainActivity : AppCompatActivity() {
              */
             if (r == this.tournament.rounds.size -1){
 
-                val intent = Intent(this, WinnerActivity::class.java)
+                val intent = Intent(this, WinnerPage::class.java)
                 startActivityForResult(intent, request_code)
             }
             /**
@@ -116,6 +117,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun populateRestaurantsOnScreen(){
+//        var resources = getResources()
         rest1button.setImageResource(this.restaurant1.imageID)
         rest2button.setImageResource(this.restaurant2.imageID)
         rest1title.setText(this.restaurant1.name)

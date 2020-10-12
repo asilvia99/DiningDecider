@@ -73,7 +73,6 @@
             android:layout_marginHorizontal="20dp"
             android:src="@drawable/chickfila"
             android:scaleType="centerCrop"
-            android:background="@android:color/black"
 
             />
 
@@ -84,7 +83,6 @@
             android:layout_marginHorizontal="20dp"
             android:src="@drawable/chipotle"
             android:scaleType="centerCrop"
-            android:background="@android:color/black"
             />
     </LinearLayout>
 

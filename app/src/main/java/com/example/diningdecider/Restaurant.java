@@ -8,7 +8,7 @@ public class Restaurant {
     int phonenumber;
     Price pricelevel;
     ArrayList<FoodType> foodTypes;
-    int imageID;
+    public int imageID;
     Boolean favorite;
     Boolean pastWinner;
 
