@@ -27,7 +27,6 @@ class random_page : AppCompatActivity() {
         setContentView(R.layout.activity_random_page)
 
 
-
         //Random Screen Buttons associated with their XML IDS
         //dineButton = findViewById(R.id.button3)
         newButton = findViewById(R.id.NEWbutton)
@@ -37,6 +36,8 @@ class random_page : AppCompatActivity() {
         resInfo = findViewById(R.id.info)
         tournament = Tournament(null)
 
+        //randomize options to begin with
+        randomizeOption();
 
 //        //Random Screen - What to set the dine button to? and edit new button
 //        dineButton.setOnClickListener {
@@ -44,15 +45,10 @@ class random_page : AppCompatActivity() {
 //            startActivity(intent)
 //        }
 
+        //randomize options after clicking
         newButton.setOnClickListener {
-            var newrestaurant = tournament.getNewRandomRestaurant()
-
-            resImage.setImageResource(newrestaurant.imageID)
-            resName.setText(newrestaurant.name)
-            resInfo.setText(newrestaurant.address)
-
+            randomizeOption();
         }
-        
 
         backButton.setOnClickListener {
             intent = Intent(this, FilterPage::class.java)
@@ -60,6 +56,13 @@ class random_page : AppCompatActivity() {
         }
     }
 
+    private fun randomizeOption(){
+        var newrestaurant = tournament.getNewRandomRestaurant()
+
+        resImage.setImageResource(newrestaurant.imageID)
+        resName.setText(newrestaurant.name)
+        resInfo.setText(newrestaurant.address)
+    }
 
 
 }

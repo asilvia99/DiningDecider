@@ -14,7 +14,10 @@
     <string name="breakfast_category">Breakfast</string>
     <string name="seafood_category">Seafood</string>
     <string name="burgers_category">Burgers</string>
-    <string name="buffet_category">Buffet</string>
+
+    <!--    changed 'BUFFET' to 'PUB'-->
+    <string name="buffet_category">Pub</string>
+
     <color name="orange">#C4421A</color>
     <color name="blue">#97CECC</color>
 </resources>
