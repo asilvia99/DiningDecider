@@ -1,7 +1,6 @@
 package com.example.diningdecider
 
 import android.content.Intent
-import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -10,7 +9,6 @@ import android.widget.ImageButton
 import android.widget.TextView
 import com.google.gson.Gson
 
-private const val request_code=0
 
 
 class MainActivity : AppCompatActivity() {
@@ -58,16 +56,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.home_screen)
 
 //        TODO: Get filter info from bundle, then filter restaurants to fit those criteria
-//        if (savedInstanceState != null){
-//            val savedScore : IntArray? = savedInstanceState.getIntArray(key_score)
-//            if (savedScore != null) {
-//                score.team1_score = savedScore[0]
-//            }
-//            if (savedScore != null) {
-//                score.team2_score = savedScore[1]
-//            }
-//
-//        }
+//        var json = intent.getStringExtra("Restaurant")
+//        val gson = Gson()
+//        var bundle = gson.fromJson(json, Restaurant::class.java)
+//        this.winner = bundle
 //        TODO: after filters are applied we should have a list of restaurants, so for now we'll use this:
         tournament = Tournament()
 
@@ -158,11 +150,15 @@ class MainActivity : AppCompatActivity() {
         //Allisons
         rest1button.setOnClickListener{ view : View ->
             finishMatch(restaurant1)
-
         }
         rest2button.setOnClickListener{ view : View ->
             finishMatch(restaurant2)
-
+        }
+        fav1Button.setOnClickListener{view: View->
+            setFavorite(restaurant1, fav1Button)
+        }
+        fav2Button.setOnClickListener{view: View->
+            setFavorite(restaurant2, fav2Button)
         }
 
     }
@@ -208,14 +204,20 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
+    /** Sets image and text to new restaurant
+     * called by getNextRestaurants
+     */
     private fun populateRestaurantsOnScreen(){
-//        var resources = getResources()
         rest1button.setImageResource(this.restaurant1.imageID)
         rest2button.setImageResource(this.restaurant2.imageID)
         rest1title.setText(this.restaurant1.name)
         rest2title.setText(this.restaurant2.name)
 
     }
+
+    /**
+     * Gets new restaurants based on the updated round/match numbers
+     */
     private fun getNextRestaurants(){
         var r1 = this.tournament.rounds.get(this.currentRound).matches.get(this.currentMatch).team1
         var r2 = this.tournament.rounds.get(this.currentRound).matches.get(this.currentMatch).team2
@@ -225,5 +227,18 @@ class MainActivity : AppCompatActivity() {
         populateRestaurantsOnScreen()
 
     }
+    private fun setFavorite(restaurant:Restaurant, button : ImageButton){
+        if (restaurant.favorite == true){
+            restaurant.favorite = false
+            button.setImageResource(R.drawable.heart)
+        }
+        else if (restaurant.favorite == false){
+            restaurant.favorite = true
+            button.setImageResource(R.drawable.heartfilled)
+        }
+
+    }
+
+
 
 }
