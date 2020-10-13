@@ -1,5 +1,6 @@
 package com.example.diningdecider
 
+import android.content.Intent
 import android.media.Image
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,6 +20,10 @@ class WinnerPage : AppCompatActivity() {
     private lateinit var directionsButton: ImageButton
     private lateinit var finishButton:ImageButton
 
+    //Winner Page Buttons
+    private lateinit var winnerBackArrow: ImageButton
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_winner_page)
@@ -31,6 +36,20 @@ class WinnerPage : AppCompatActivity() {
         resImg.setImageResource(winner.imageID)
         resName.setText(winner.name)
 
+
+        //Winner Screen Buttons
+        winnerBackArrow = findViewById(R.id.wp_backbutton)
+        finishButton = findViewById(R.id.wp_backbutton)
+
+        //Winner Screen
+        winnerBackArrow.setOnClickListener {
+            intent = Intent(this, HomePage::class.java)
+            startActivity(intent)
+        }
+        finishButton.setOnClickListener {
+            intent = Intent(this, HomePage::class.java)
+            startActivity(intent)
+        }
 
     }
 }
