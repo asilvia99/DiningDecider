@@ -1,6 +1,7 @@
 package com.example.diningdecider;
 
 import java.util.ArrayList;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Tournament {
@@ -72,10 +73,14 @@ public class Tournament {
 
 
     }
-//
-//    public Restaurant getNewRandomRestaurant(){
-////        return
-//    }
+
+
+
+    public Restaurant getNewRandomRestaurant(){
+        Random rand = new Random();
+        int r = rand.nextInt(this.restaurants.size()-1);
+        return this.restaurants.get(r);
+    }
 
 
     /**
