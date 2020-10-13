@@ -11,7 +11,7 @@ import com.google.gson.Gson
 
 
 
-class MainActivity : AppCompatActivity() {
+class TournamentActivity : AppCompatActivity() {
     private lateinit var tournament : Tournament
     private lateinit var restaurant1: Restaurant
     private lateinit var restaurant2: Restaurant

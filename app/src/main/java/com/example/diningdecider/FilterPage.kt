@@ -27,7 +27,7 @@ class FilterPage : AppCompatActivity() {
         }
 
         helpMeButton.setOnClickListener {
-            intent = Intent(this, Tournament::class.java)
+            intent = Intent(this, TournamentActivity::class.java)
             startActivity(intent)
         }
     }
