@@ -25,13 +25,13 @@
         android:layout_height="106dp"
         android:layout_marginStart="248dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView5"
+        app:layout_constraintStart_toEndOf="@+id/favBackArrow"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/dd2"
         android:layout_marginLeft="248dp" />
 
     <ImageView
-        android:id="@+id/imageView5"
+        android:id="@+id/favBackArrow"
         android:layout_width="60dp"
         android:layout_height="48dp"
         android:layout_marginStart="8dp"

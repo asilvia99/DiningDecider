@@ -5,6 +5,7 @@ import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import com.google.gson.Gson
@@ -32,11 +33,29 @@ class MainActivity : AppCompatActivity() {
     private lateinit var title: TextView
     private lateinit var subtitle:TextView
 
+    //Home Page Button
+    private lateinit var findButton: Button
+    private lateinit var favoriteButton: ImageButton
+
+    //Filter Page Buttons
+    private lateinit var chooseForMeButton: Button
+    private lateinit var helpMeButton: Button
+
+    //Favorites Page Buttons
+    private lateinit var favBackArrow: ImageButton
+
+    //Random Page Buttons
+    private lateinit var dineButton: Button
+    private lateinit var newButton: Button
+
+    //Winner Page Buttons
+    private lateinit var winnerBackArrow: ImageButton
+    private lateinit var finishButton: ImageButton
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.tournament_chooser)
+        setContentView(R.layout.home_screen)
 
 //        TODO: Get filter info from bundle, then filter restaurants to fit those criteria
 //        if (savedInstanceState != null){
@@ -65,9 +84,78 @@ class MainActivity : AppCompatActivity() {
         title = findViewById(R.id.ts_title)
         subtitle = findViewById(R.id.ts_subtitle)
 
+        //Home Screen Buttons
+        favoriteButton = findViewById(R.id.favoritesButton)
+        findButton = findViewById(R.id.findbutton)
+
+        //Filter Screen Buttons
+        chooseForMeButton = findViewById(R.id.button2)
+        helpMeButton = findViewById(R.id.button3)
+
+        //Favorites Screen Buttons
+        favBackArrow = findViewById(R.id.favBackArrow)
+
+        //Random Screen Buttons
+        dineButton = findViewById(R.id.button3)
+        newButton = findViewById(R.id.button2)
+
+        //Winner Screen Buttons
+        winnerBackArrow = findViewById(R.id.wp_backbutton)
+        finishButton = findViewById(R.id.wp_backbutton)
 
         getNextRestaurants()
 
+
+        //Home Screen
+        favoriteButton.setOnClickListener {
+            intent = Intent(this, FavoritePage::class.java)
+            startActivity(intent)
+        }
+
+        findButton.setOnClickListener {
+            intent = Intent(this, FilterPage::class.java)
+            startActivity(intent)
+        }
+
+
+        //Filter Screen - What page is the tournament called?
+        chooseForMeButton.setOnClickListener {
+            intent = Intent(this, random_page::class.java)
+            startActivity(intent)
+        }
+
+        helpMeButton.setOnClickListener {
+            intent = Intent(this, Tournament::class.java)
+            startActivity(intent)
+        }
+
+        //Favorites Screen
+        favBackArrow.setOnClickListener {
+            intent = Intent(this, HomePage::class.java)
+            startActivity(intent)
+        }
+
+        //Random Screen - What to set the dine button to? and edit new button
+        dineButton.setOnClickListener {
+            intent = Intent(this, WinnerPage::class.java)
+            startActivity(intent)
+        }
+        newButton.setOnClickListener {
+            intent = Intent(this, random_page::class.java)
+            startActivity(intent)
+        }
+
+        //Winner Screen
+        winnerBackArrow.setOnClickListener {
+            intent = Intent(this, HomePage::class.java)
+            startActivity(intent)
+        }
+        finishButton.setOnClickListener {
+            intent = Intent(this, HomePage::class.java)
+            startActivity(intent)
+        }
+
+        //Allisons
         rest1button.setOnClickListener{ view : View ->
             finishMatch(restaurant1)
 
