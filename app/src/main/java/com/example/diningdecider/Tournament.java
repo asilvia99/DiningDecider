@@ -10,15 +10,20 @@ public class Tournament {
     ArrayList<Round> rounds;
 
     /**
-     * Creates tournament with appropriate num of teams and sets up round 1
-     *
-     * Should take in list of restaurants but for now, we're using "makeRestaurants"
+     * Should take in list of filters and filter the existing restaurants
+     * but for now, we're using "makeRestaurants"
      */
-    public Tournament(){
+    public Tournament(FilterData filters){
         makeRestaurants();
-        int inputnumres = restaurants.size();
-//        if the input number of restaurants is not even for a tournament
-//        remove the last restaurants on the list until it is
+
+    }
+
+    /**
+     * Creates tournament with appropriate num of teams and sets up round 1
+     * if the input number of restaurants is not even for a tournament
+     * remove the last restaurants on the list until it is
+     */
+    public void prepForTournament(){
         while(!isGoodForTournament(restaurants.size())) {
             int i = restaurants.size() -1;
             restaurants.remove(i);
@@ -60,24 +65,20 @@ public class Tournament {
     }
 
 
-    /**
-     * Runs each round in the tournament
-     */
-//    public void runTournament(){
-//        for (int i = 0; i< this.numRounds; i++){
-//            this.rounds.get(i).runRound(i+1);
-//            ArrayList<Restaurant> winners = this.rounds.get(i).winners;
-//            if (i != this.numRounds -1){
-//                rounds.get(i+1).populateMatches(winners);
-//            }
-//            else{
-//                System.out.println("Winner is: " + winners.get(0).name);
-//            }
-//        }
-//
-//    }
 
+    public void filterRestaurants(FilterData filters){
+        for (Restaurant r: this.restaurants){
+            if (r.pricelevel != filters.price){
+                this.restaurants.remove(r);
+                break;
+            }
+//            for (FoodType f:filters.foodTypes){
+//                Boolean match = false;
+//                if (f == r.)
+//            }
+        }
 
+    }
 
 
     /**

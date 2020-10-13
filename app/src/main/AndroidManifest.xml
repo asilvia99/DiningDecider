@@ -11,9 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".random_page"/>
         <activity android:name=".WinnerPage" />
-        <activity android:name=".MainActivity"/>
-
-
+        <activity android:name=".TournamentActivity"/>
         <activity android:name=".FavoritePage" />
         <activity android:name=".FilterPage" />
         <activity android:name=".HomePage" >

@@ -52,7 +52,8 @@ class TournamentActivity : AppCompatActivity() {
 //        var bundle = gson.fromJson(json, Restaurant::class.java)
 //        this.winner = bundle
 //        TODO: after filters are applied we should have a list of restaurants, so for now we'll use this:
-        tournament = Tournament()
+        tournament = Tournament(null)
+        tournament.prepForTournament()
 
 
         rest1button = findViewById(R.id.ts_img1)
