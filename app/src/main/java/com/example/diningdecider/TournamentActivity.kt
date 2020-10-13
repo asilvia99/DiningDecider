@@ -46,7 +46,7 @@ class TournamentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tournament_chooser)
 
-//        TODO: Get filter info from bundle, then filter restaurants to fit those criteria
+//        TODO: Get filter info from intent extra, then filter restaurants to fit those criteria
 //        var json = intent.getStringExtra("Restaurant")
 //        val gson = Gson()
 //        var bundle = gson.fromJson(json, Restaurant::class.java)
@@ -85,6 +85,10 @@ class TournamentActivity : AppCompatActivity() {
         }
         fav2Button.setOnClickListener{view: View->
             setFavorite(restaurant2, fav2Button)
+        }
+        backButton.setOnClickListener {
+            intent = Intent(this, HomePage::class.java)
+            startActivity(intent)
         }
 
     }
@@ -138,6 +142,8 @@ class TournamentActivity : AppCompatActivity() {
         rest2button.setImageResource(this.restaurant2.imageID)
         rest1title.setText(this.restaurant1.name)
         rest2title.setText(this.restaurant2.name)
+        setInitFavButtons(restaurant1, fav1Button)
+        setInitFavButtons(restaurant2, fav2Button)
 
     }
 
@@ -163,6 +169,14 @@ class TournamentActivity : AppCompatActivity() {
             button.setImageResource(R.drawable.heartfilled)
         }
 
+    }
+    private fun setInitFavButtons(restaurant: Restaurant, button: ImageButton){
+        if (restaurant.favorite == true){
+            button.setImageResource(R.drawable.heartfilled)
+        }
+        else if (restaurant.favorite == false){
+            button.setImageResource(R.drawable.heart)
+        }
     }
 
 

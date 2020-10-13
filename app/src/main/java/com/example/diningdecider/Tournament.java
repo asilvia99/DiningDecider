@@ -67,18 +67,15 @@ public class Tournament {
 
 
     public void filterRestaurants(FilterData filters){
-        for (Restaurant r: this.restaurants){
-            if (r.pricelevel != filters.price){
-                this.restaurants.remove(r);
-                break;
-            }
-//            for (FoodType f:filters.foodTypes){
-//                Boolean match = false;
-//                if (f == r.)
-//            }
-        }
+        ArrayList<Restaurant> eligibleRestaurants = new ArrayList<>();
+//        fuck this figure it out later
+
 
     }
+//
+//    public Restaurant getNewRandomRestaurant(){
+////        return
+//    }
 
 
     /**
