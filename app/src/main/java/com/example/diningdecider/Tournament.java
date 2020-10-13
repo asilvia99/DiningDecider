@@ -90,20 +90,27 @@ public class Tournament {
         ArrayList a = new ArrayList<FoodType>();
         a.add(FoodType.FastFood);
         ArrayList b = new ArrayList<FoodType>();
-        a.add(FoodType.Burgers);
+        b.add(FoodType.Burgers);
         ArrayList c = new ArrayList<FoodType>();
-        a.add(FoodType.Mexican);
+        c.add(FoodType.Mexican);
         ArrayList d = new ArrayList<FoodType>();
+        ArrayList e = new ArrayList<FoodType>();
+        e.add(FoodType.Pub);
+        ArrayList f = new ArrayList<FoodType>();
+        f.add(FoodType.Seafood);
 
-        Restaurant chickfila = new Restaurant("Chick Fil-a", "1 st",1,Price.LOW, a , R.drawable.chickfila);
-        Restaurant chipotle = new Restaurant("Chipotle","1 st", 2, Price.LOW, a, R.drawable.chipotle);
-        Restaurant mcdonalds = new Restaurant("McDonalds", "1 st", 3, Price.LOW, a, R.drawable.mcdonalds);
-        Restaurant tacobell = new Restaurant("Taco Bell", "1 st", 4, Price.LOW, a, R.drawable.tacobell);
-        Restaurant burgerking = new Restaurant("Burger King", "1 st", 5, Price.LOW, a, R.drawable.burgerking);
-        Restaurant thefix = new Restaurant("The Fix Burger Bar", "1st", 6, Price.MEDIUM, b, R.drawable.fix);
-        Restaurant mezcal = new Restaurant("MezCal Cantina", "1 st", 7, Price.MEDIUM, c, R.drawable.mezcal);
-        Restaurant panera = new Restaurant("Panera Bread", "1 st", 8, Price.MEDIUM, d, R.drawable.panera);
-        Restaurant nu = new Restaurant("Nu Kitchen", "1st", 9, Price.MEDIUM, d, R.drawable.panera);
+        Restaurant chickfila = new Restaurant("Chick Fil-a", "80 Gold Star Blvd","508-459-9852",Price.LOW, a , R.drawable.chickfila);
+        Restaurant chipotle = new Restaurant("Chipotle","49 Park Ave Suite 1", "774-420-7718", Price.LOW, a, R.drawable.chipotle);
+        Restaurant mcdonalds = new Restaurant("McDonalds", "465 Shrewsbury St", "508-757-9996", Price.LOW, a, R.drawable.mcdonalds);
+        Restaurant tacobell = new Restaurant("Taco Bell", "463 Lincoln St", "774-701-1580", Price.LOW, a, R.drawable.tacobell);
+        Restaurant burgerking = new Restaurant("Burger King", "163 Madison St", "508-752-7952", Price.LOW, a, R.drawable.burgerking);
+        Restaurant thefix = new Restaurant("The Fix Burger Bar", "108 Grove St", "774-823-3327", Price.MEDIUM, b, R.drawable.fix);
+        Restaurant mezcal = new Restaurant("MezCal Tequila Cantina", "30 Major Taylor Blvd", "508-926-8308", Price.MEDIUM, c, R.drawable.mezcal);
+        Restaurant panera = new Restaurant("Panera Bread", "120 Gold Star Blvd", "508-856-7007", Price.MEDIUM, d, R.drawable.panera);
+        Restaurant nu = new Restaurant("Nu Kitchen", "335 Chandler St", "508-926-8800", Price.MEDIUM, d, R.drawable.nu);
+        Restaurant boynton = new Restaurant("The Boynton Restaurant & Spirits", "117 Highland St", "508-756-8458", Price.MEDIUM,e, R.drawable.boynton );
+        Restaurant sole = new Restaurant("The Sole Proprietor", "118 Highland St", "508-798-3474", Price.HIGH,f, R.drawable.sole );
+        Restaurant oakbt = new Restaurant("Oak Barrel Tavern", "229 Grove St", "508-755-8047", Price.MEDIUM, e, R.drawable.oak);
 
 
 

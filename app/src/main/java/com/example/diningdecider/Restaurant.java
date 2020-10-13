@@ -8,14 +8,14 @@ import java.util.ArrayList;
 public class Restaurant {
     String name;
     String address;
-    int phonenumber;
+    String phonenumber;
     Price pricelevel;
     ArrayList<FoodType> foodTypes;
     public int imageID;
     Boolean favorite;
     Boolean pastWinner;
 
-    public Restaurant(String name, String address, int phonenumber, Price pricelevel, ArrayList<FoodType> foodTypes, int imageID) {
+    public Restaurant(String name, String address, String phonenumber, Price pricelevel, ArrayList<FoodType> foodTypes, int imageID) {
         this.name = name;
         this.address = address;
         this.phonenumber = phonenumber;
