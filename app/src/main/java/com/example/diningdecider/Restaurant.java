@@ -9,16 +9,18 @@ public class Restaurant {
     String name;
     String address;
     String phonenumber;
+    int distance;
     Price pricelevel;
     ArrayList<FoodType> foodTypes;
     public int imageID;
     Boolean favorite;
     Boolean pastWinner;
 
-    public Restaurant(String name, String address, String phonenumber, Price pricelevel, ArrayList<FoodType> foodTypes, int imageID) {
+    public Restaurant(String name, String address, String phonenumber, int distance, Price pricelevel, ArrayList<FoodType> foodTypes, int imageID) {
         this.name = name;
         this.address = address;
         this.phonenumber = phonenumber;
+        this.distance = distance;
         this.pricelevel = pricelevel;
         this.foodTypes = foodTypes;
         this.imageID = imageID;
