@@ -107,10 +107,10 @@ public class Tournament {
         Restaurant thefix = new Restaurant("The Fix Burger Bar", "108 Grove St", "774-823-3327", Price.MEDIUM, b, R.drawable.fix);
         Restaurant mezcal = new Restaurant("MezCal Tequila Cantina", "30 Major Taylor Blvd", "508-926-8308", Price.MEDIUM, c, R.drawable.mezcal);
         Restaurant panera = new Restaurant("Panera Bread", "120 Gold Star Blvd", "508-856-7007", Price.MEDIUM, d, R.drawable.panera);
-        Restaurant nu = new Restaurant("Nu Kitchen", "335 Chandler St", "508-926-8800", Price.MEDIUM, d, R.drawable.nu);
-        Restaurant boynton = new Restaurant("The Boynton Restaurant & Spirits", "117 Highland St", "508-756-8458", Price.MEDIUM,e, R.drawable.boynton );
-        Restaurant sole = new Restaurant("The Sole Proprietor", "118 Highland St", "508-798-3474", Price.HIGH,f, R.drawable.sole );
-        Restaurant oakbt = new Restaurant("Oak Barrel Tavern", "229 Grove St", "508-755-8047", Price.MEDIUM, e, R.drawable.oak);
+//        Restaurant nu = new Restaurant("Nu Kitchen", "335 Chandler St", "508-926-8800", Price.MEDIUM, d, R.drawable.nu);
+//        Restaurant boynton = new Restaurant("The Boynton Restaurant & Spirits", "117 Highland St", "508-756-8458", Price.MEDIUM,e, R.drawable.boynton );
+//        Restaurant sole = new Restaurant("The Sole Proprietor", "118 Highland St", "508-798-3474", Price.HIGH,f, R.drawable.sole );
+//        Restaurant oakbt = new Restaurant("Oak Barrel Tavern", "229 Grove St", "508-755-8047", Price.MEDIUM, e, R.drawable.oak);
 
 
 
@@ -123,7 +123,7 @@ public class Tournament {
         restaurants.add(thefix);
         restaurants.add(mezcal);
         restaurants.add(panera);
-        restaurants.add(nu);
+//        restaurants.add(nu);
 
 
         System.out.println("There are " + numTeams + " teams in the tournament");
