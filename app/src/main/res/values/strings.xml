@@ -16,7 +16,7 @@
     <string name="burgers_category">Burgers</string>
 
     <!--    changed 'BUFFET' to 'PUB'-->
-    <string name="buffet_category">Pub</string>
+    <string name="pub_category">Pub</string>
 
     <color name="orange">#C4421A</color>
     <color name="blue">#97CECC</color>
