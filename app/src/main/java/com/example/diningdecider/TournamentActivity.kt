@@ -4,7 +4,6 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
 import android.widget.ImageButton
 import android.widget.TextView
 import com.google.gson.Gson
@@ -13,6 +12,7 @@ import com.google.gson.Gson
 
 class TournamentActivity : AppCompatActivity() {
     private lateinit var tournament : Tournament
+    private lateinit var filters: FilterData
     private lateinit var restaurant1: Restaurant
     private lateinit var restaurant2: Restaurant
 
@@ -24,9 +24,7 @@ class TournamentActivity : AppCompatActivity() {
     private lateinit var rest1title: TextView
     private lateinit var rest2title: TextView
     private lateinit var backButton: ImageButton
-    private lateinit var info1Button: ImageButton
     private lateinit var fav1Button: ImageButton
-    private lateinit var info2Button: ImageButton
     private lateinit var fav2Button: ImageButton
     private lateinit var title: TextView
     private lateinit var subtitle:TextView
@@ -46,13 +44,17 @@ class TournamentActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.tournament_chooser)
 
-//        TODO: Get filter info from intent extra, then filter restaurants to fit those criteria
-//        var json = intent.getStringExtra("Restaurant")
-//        val gson = Gson()
-//        var bundle = gson.fromJson(json, Restaurant::class.java)
-//        this.winner = bundle
-//        TODO: after filters are applied we should have a list of restaurants, so for now we'll use this:
-        tournament = Tournament(null)
+        /**
+         * Get filters from intent extra
+         */
+        var json = intent.getStringExtra("Filters")
+        val gson = Gson()
+        var bundle = gson.fromJson(json, FilterData::class.java)
+        this.filters = bundle
+        /**
+         * pass filters received from filters page into the tournament so it can filter the restaurants
+         */
+        tournament = Tournament(this.filters)
         tournament.prepForTournament()
 
 
@@ -61,9 +63,7 @@ class TournamentActivity : AppCompatActivity() {
         rest1title = findViewById(R.id.ts_name1)
         rest2title = findViewById(R.id.ts_name2)
         backButton = findViewById(R.id.ts_backbutton)
-        info1Button = findViewById(R.id.ts_infoButton1)
         fav1Button = findViewById(R.id.ts_favButton1)
-        info2Button = findViewById(R.id.ts_infoButton2)
         fav2Button = findViewById(R.id.ts_favButton2)
         title = findViewById(R.id.ts_title)
         subtitle = findViewById(R.id.ts_subtitle)

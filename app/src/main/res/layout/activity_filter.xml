@@ -7,10 +7,10 @@
     tools:context=".TournamentActivity">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/waveImageView"
         android:layout_width="466dp"
         android:layout_height="201dp"
-        android:layout_marginTop="568dp"
+        android:layout_marginTop="510dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,7 @@
         app:srcCompat="@drawable/path_7" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/backImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -63,26 +63,28 @@
         app:srcCompat="@drawable/dd2" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/randomButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:background="@android:color/white"
+        android:background="@drawable/rounded_button"
         android:text="@string/random_choose"
         android:textColor="#C4421A"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.931" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/tournamentButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
-        android:background="@android:color/white"
+        android:background="@drawable/rounded_button"
         android:text="@string/tournament_choose"
         android:textColor="#C4421A"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -135,7 +137,7 @@
         app:layout_constraintTop_toBottomOf="@+id/distanceSeekBar" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/price1ImageButton"
         android:layout_width="61dp"
         android:layout_height="69dp"
         android:layout_marginStart="40dp"
@@ -145,14 +147,14 @@
         app:srcCompat="@drawable/money1" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/price2ImageButton"
         android:layout_width="61dp"
         android:layout_height="69dp"
         android:layout_marginStart="72dp"
         android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton4"
+        app:layout_constraintEnd_toStartOf="@+id/price3ImageButton"
         app:layout_constraintHorizontal_bias="0.026"
-        app:layout_constraintStart_toEndOf="@+id/imageButton2"
+        app:layout_constraintStart_toEndOf="@+id/price1ImageButton"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:srcCompat="@drawable/money2" />
 
@@ -166,10 +168,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+        app:layout_constraintTop_toBottomOf="@+id/price2ImageButton" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/breakfastCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
@@ -179,93 +181,93 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <CheckBox
-        android:id="@+id/checkBox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="12dp"
-        android:text="@string/buffet_category"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox" />
-
-    <CheckBox
-        android:id="@+id/checkBox3"
+        android:id="@+id/chineseCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="12dp"
         android:text="@string/chinese_category"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox2" />
+        app:layout_constraintTop_toBottomOf="@+id/breakfastCheckBox" />
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkBox3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="12dp"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:text="@string/chinese_category"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/chineseCheckBox" />-->
 
     <CheckBox
-        android:id="@+id/checkBox4"
+        android:id="@+id/fastfoodCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="@string/fast_category"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox5"
-        app:layout_constraintStart_toEndOf="@+id/checkBox"
+        app:layout_constraintEnd_toStartOf="@+id/mexicanCheckBox"
+        app:layout_constraintStart_toEndOf="@+id/breakfastCheckBox"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <CheckBox
-        android:id="@+id/checkBox5"
+        android:id="@+id/mexicanCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
-        android:text="@string/burgers_category"
+        android:text="@string/mexican_category"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <CheckBox
-        android:id="@+id/checkBox6"
+        android:id="@+id/thaiCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:text="@string/thai_category"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox8"
-        app:layout_constraintStart_toEndOf="@+id/checkBox2"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox4" />
+        app:layout_constraintEnd_toStartOf="@+id/indianCheckBox"
+        app:layout_constraintStart_toEndOf="@+id/chineseCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/fastfoodCheckBox" />
+
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkBox7"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:text="@string/mexican_category"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/checkBox9"-->
+<!--        app:layout_constraintStart_toEndOf="@+id/checkBox3"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/checkBox6" />-->
 
     <CheckBox
-        android:id="@+id/checkBox7"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="@string/mexican_category"
-        app:layout_constraintEnd_toStartOf="@+id/checkBox9"
-        app:layout_constraintStart_toEndOf="@+id/checkBox3"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox6" />
-
-    <CheckBox
-        android:id="@+id/checkBox8"
+        android:id="@+id/indianCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
         android:text="@string/indian_category"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox5" />
+        app:layout_constraintTop_toBottomOf="@+id/mexicanCheckBox" />
 
-    <CheckBox
-        android:id="@+id/checkBox9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:layout_marginEnd="12dp"
-        android:text="@string/seafood_category"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBox8" />
+<!--    <CheckBox-->
+<!--        android:id="@+id/checkBox9"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginTop="12dp"-->
+<!--        android:layout_marginEnd="12dp"-->
+<!--        android:text="@string/seafood_category"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/indianCheckBox" />-->
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/price3ImageButton"
         android:layout_width="61dp"
         android:layout_height="69dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/money2" />
+        app:srcCompat="@drawable/money3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

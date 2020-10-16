@@ -3,13 +3,15 @@ package com.example.diningdecider;
 //food
 
 public enum FoodType {
-    FastFood,
-    Burgers,
-    Thai,
+    None,
+    Breakfast,
     Pub,
     Chinese,
-    Sushi,
-    Italian,
-    Pizza,
-    Mexican
+    FastFood,
+    Thai, //remove
+    Mexican,
+    Burgers, //remove
+    Indian, //remove
+    Seafood
+
 }
