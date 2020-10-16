@@ -16,6 +16,7 @@ public class Tournament {
      */
     public Tournament(FilterData filters){
         makeRestaurants();
+        filterRestaurants(filters);
 
     }
 
@@ -26,13 +27,20 @@ public class Tournament {
      */
     public void prepForTournament(){
         while(!isGoodForTournament(restaurants.size())) {
+            if (restaurants.size() == 0){
+                break;
+            }
             int i = restaurants.size() -1;
             restaurants.remove(i);
         }
-        this.restaurants = restaurants;
         this.numTeams = restaurants.size();
 
         this.initializeTournament();
+
+        System.out.println("There are " + restaurants.size() + " restarurants");
+        for (Restaurant r: restaurants){
+            System.out.println(r.name);
+        }
     }
 
 
@@ -70,18 +78,23 @@ public class Tournament {
     public void filterRestaurants(FilterData filters){
         ArrayList<Restaurant> eligibleRestaurants = new ArrayList<>();
 
-        int size = eligibleRestaurants.size();
+        int size = restaurants.size();
         for(int i = 0; i < (size-1); i++) {
 
             Restaurant current = restaurants.get(i);
-            if(current.distance <= filters.radius && current.pricelevel.equals(filters.price) && filters.foodTypes.equals(FoodType.None)) {
+
+            //If there is no food type selected in filter
+            if(current.distance <= filters.radius && (current.pricelevel.equals(filters.price) || filters.price.equals(Price.NONE)) && filters.foodTypes.equals(FoodType.None)) {
                 eligibleRestaurants.add(current);
             }
-            else if(current.distance <= filters.radius && current.pricelevel.equals(filters.price) && filters.foodTypes.contains(current.foodTypes)) {
+            // if all criteria are picked
+            else if(current.distance <= filters.radius && (current.pricelevel.equals(filters.price) || filters.price.equals(Price.NONE)) && filters.foodTypes.contains(current.foodTypes)) {
                 eligibleRestaurants.add(current);
             }
 
+
         }
+        this.restaurants = eligibleRestaurants;
 
     }
 
@@ -132,17 +145,17 @@ public class Tournament {
         restaurants.add(thefix);
         restaurants.add(mezcal);
         restaurants.add(panera);
-//        restaurants.add(nu);
-//        restaurants.add(elpatron);
-//        restaurants.add(mexicali);
-//        restaurants.add(solofmexico);
-//        restaurants.add(tacosmexico);
-//        restaurants.add(pepes);
-//        restaurants.add(dostacos);
-//        restaurants.add(moes);
-//        restaurants.add(wendys);
-//        restaurants.add(kfc);
-//        restaurants.add(fiveguys);
+        restaurants.add(nu);
+        restaurants.add(elpatron);
+        restaurants.add(mexicali);
+        restaurants.add(solofmexico);
+        restaurants.add(tacosmexico);
+        restaurants.add(pepes);
+        restaurants.add(dostacos);
+        restaurants.add(moes);
+        restaurants.add(wendys);
+        restaurants.add(kfc);
+        restaurants.add(fiveguys);
 
 
 

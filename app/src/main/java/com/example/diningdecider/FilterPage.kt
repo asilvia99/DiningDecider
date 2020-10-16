@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
+import com.google.gson.Gson
 
 private const val TAG = "FilterPage"
 
@@ -142,10 +143,9 @@ class FilterPage : AppCompatActivity() {
         //Filter Screen - What page is the tournament called?
         chooseForMeButton.setOnClickListener {
             intent = Intent(this, random_page::class.java)
-//            var filter =  getFilterPreferences
-//            val gson = Gson()
-//            val json = gson.toJson(filter)
-//            intent.putExtra("Filters", json)
+            val gson = Gson()
+            val json = gson.toJson(filterData)
+            intent.putExtra("Filters", json)
             startActivity(intent)
         }
 
@@ -155,10 +155,9 @@ class FilterPage : AppCompatActivity() {
             filterData.foodTypes = foodTypes
             Log.d(TAG, "Here it is ${filterData.radius} ${filterData.price} ${filterData.foodTypes}")
             intent = Intent(this, TournamentActivity::class.java)
-//            var filter =  getFilterPreferences
-//            val gson = Gson()
-//            val json = gson.toJson(filter)
-//            intent.putExtra("Filters", json)
+            val gson = Gson()
+            val json = gson.toJson(filterData)
+            intent.putExtra("Filters", json)
             startActivity(intent)
         }
 
