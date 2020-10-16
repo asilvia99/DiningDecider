@@ -10,7 +10,7 @@
         android:id="@+id/waveImageView"
         android:layout_width="466dp"
         android:layout_height="201dp"
-        android:layout_marginTop="568dp"
+        android:layout_marginTop="510dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.509"
         app:layout_constraintStart_toStartOf="parent"
@@ -67,9 +67,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
-        android:background="@android:color/white"
+        android:background="@drawable/rounded_button"
         android:text="@string/random_choose"
         android:textColor="#C4421A"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -80,9 +81,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="40dp"
-        android:background="@android:color/white"
+        android:background="@drawable/rounded_button"
         android:text="@string/tournament_choose"
         android:textColor="#C4421A"
+        android:padding="10dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -266,6 +268,6 @@
         android:layout_marginEnd="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
-        app:srcCompat="@drawable/money2" />
+        app:srcCompat="@drawable/money3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
