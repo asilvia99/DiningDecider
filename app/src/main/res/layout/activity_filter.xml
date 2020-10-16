@@ -221,12 +221,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <CheckBox
-        android:id="@+id/thaiCheckBox"
+        android:id="@+id/seafoodCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:text="@string/thai_category"
-        app:layout_constraintEnd_toStartOf="@+id/indianCheckBox"
+        android:text="@string/seafood_category"
+        app:layout_constraintEnd_toStartOf="@+id/pubCheckBox"
         app:layout_constraintStart_toEndOf="@+id/chineseCheckBox"
         app:layout_constraintTop_toBottomOf="@+id/fastfoodCheckBox" />
 
@@ -241,12 +241,12 @@
 <!--        app:layout_constraintTop_toBottomOf="@+id/checkBox6" />-->
 
     <CheckBox
-        android:id="@+id/indianCheckBox"
+        android:id="@+id/pubCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="12dp"
-        android:text="@string/indian_category"
+        android:text="@string/pub_category"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mexicanCheckBox" />
 

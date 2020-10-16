@@ -26,9 +26,9 @@ class FilterPage : AppCompatActivity() {
     private lateinit var fastfoodCheckBox: CheckBox
     private lateinit var breakfastCheckBox: CheckBox
     private lateinit var chineseCheckBox: CheckBox
-    private lateinit var indianCheckBox: CheckBox
+    private lateinit var pubCheckBox: CheckBox
     private lateinit var mexicanCheckBox: CheckBox
-    private lateinit var thaiCheckBox: CheckBox
+    private lateinit var seafoodCheckBox: CheckBox
     private lateinit var backButton : ImageButton
 
 
@@ -54,9 +54,9 @@ class FilterPage : AppCompatActivity() {
         fastfoodCheckBox = findViewById(R.id.fastfoodCheckBox)
         breakfastCheckBox = findViewById(R.id.breakfastCheckBox)
         chineseCheckBox = findViewById(R.id.chineseCheckBox)
-        indianCheckBox = findViewById(R.id.indianCheckBox)
+        pubCheckBox = findViewById(R.id.pubCheckBox)
         mexicanCheckBox = findViewById(R.id.mexicanCheckBox)
-        thaiCheckBox = findViewById(R.id.thaiCheckBox)
+        seafoodCheckBox = findViewById(R.id.seafoodCheckBox)
 
         distanceTextView = findViewById(R.id.distance_textView)
         distanceTextView.setText("Distance: 10")
@@ -94,12 +94,12 @@ class FilterPage : AppCompatActivity() {
             }
         }
 
-        indianCheckBox.setOnCheckedChangeListener { buttonView, isChecked ->
+        pubCheckBox.setOnCheckedChangeListener { buttonView, isChecked ->
             if(isChecked) {
-                foodTypes.add(FoodType.Indian)
+                foodTypes.add(FoodType.Pub)
             }
             else {
-                foodTypes.remove(FoodType.Indian)
+                foodTypes.remove(FoodType.Pub)
             }
         }
 
@@ -130,12 +130,12 @@ class FilterPage : AppCompatActivity() {
             }
         }
 
-        thaiCheckBox.setOnCheckedChangeListener { buttonView, isChecked ->
+        seafoodCheckBox.setOnCheckedChangeListener { buttonView, isChecked ->
             if(isChecked) {
-                foodTypes.add(FoodType.Thai)
+                foodTypes.add(FoodType.Seafood)
             }
             else {
-                foodTypes.remove(FoodType.Thai)
+                foodTypes.remove(FoodType.Seafood)
             }
         }
 
