@@ -32,15 +32,15 @@ class FilterPage : AppCompatActivity() {
     private lateinit var backButton : ImageButton
 
 
-    private var radius: Int = 10
-    private var price : Price = Price.NONE
-    private var foodTypes : ArrayList<FoodType> = arrayListOf()
-    private var filterData : FilterData = FilterData(radius, price, foodTypes)
+
+    private lateinit var filterData : FilterData
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_filter)
+
+        filterData = FilterData()
 
         //Filter Screen Buttons
         chooseForMeButton = findViewById(R.id.randomButton)
@@ -69,73 +69,73 @@ class FilterPage : AppCompatActivity() {
 
         // Filter for only getting restaurants with low price
         price1Button.setOnClickListener {
-            price = Price.LOW
+            filterData.price = Price.LOW
             highlightMoneyButtons(price1Button)
         }
 
         // Filter for only getting restaurants with medium price
         price2Button.setOnClickListener {
-            price = Price.MEDIUM
+            filterData.price = Price.MEDIUM
             highlightMoneyButtons(price2Button)
         }
 
         // Filter for only getting restaurants with high price
         price3Button.setOnClickListener {
-            price = Price.HIGH
+            filterData.price = Price.HIGH
             highlightMoneyButtons(price3Button)
         }
 
         fastfoodCheckBox.setOnCheckedChangeListener { buttonView, isChecked ->
             if(isChecked) {
-                foodTypes.add(FoodType.FastFood)
+                filterData.foodTypes.add(FoodType.FastFood)
             }
             else {
-                foodTypes.remove(FoodType.FastFood)
+                filterData.foodTypes.remove(FoodType.FastFood)
             }
         }
 
         pubCheckBox.setOnCheckedChangeListener { buttonView, isChecked ->
             if(isChecked) {
-                foodTypes.add(FoodType.Pub)
+                filterData.foodTypes.add(FoodType.Pub)
             }
             else {
-                foodTypes.remove(FoodType.Pub)
+                filterData.foodTypes.remove(FoodType.Pub)
             }
         }
 
         mexicanCheckBox.setOnCheckedChangeListener { buttonView, isChecked ->
             if(isChecked) {
-                foodTypes.add(FoodType.Mexican)
+                filterData.foodTypes.add(FoodType.Mexican)
             }
             else {
-                foodTypes.remove(FoodType.Mexican)
+                filterData.foodTypes.remove(FoodType.Mexican)
             }
         }
 
         breakfastCheckBox.setOnCheckedChangeListener { buttonView, isChecked ->
             if(isChecked) {
-                foodTypes.add(FoodType.Breakfast)
+                filterData.foodTypes.add(FoodType.Breakfast)
             }
             else {
-                foodTypes.remove(FoodType.Breakfast)
+                filterData.foodTypes.remove(FoodType.Breakfast)
             }
         }
 
         chineseCheckBox.setOnCheckedChangeListener { buttonView, isChecked ->
             if(isChecked) {
-                foodTypes.add(FoodType.Chinese)
+                filterData.foodTypes.add(FoodType.Chinese)
             }
             else {
-                foodTypes.remove(FoodType.Chinese)
+                filterData.foodTypes.remove(FoodType.Chinese)
             }
         }
 
         seafoodCheckBox.setOnCheckedChangeListener { buttonView, isChecked ->
             if(isChecked) {
-                foodTypes.add(FoodType.Seafood)
+                filterData.foodTypes.add(FoodType.Seafood)
             }
             else {
-                foodTypes.remove(FoodType.Seafood)
+                filterData.foodTypes.remove(FoodType.Seafood)
             }
         }
 
@@ -150,9 +150,7 @@ class FilterPage : AppCompatActivity() {
         }
 
         helpMeButton.setOnClickListener {
-            filterData.radius = radius
-            filterData.price = price
-            filterData.foodTypes = foodTypes
+
             Log.d(TAG, "Here it is ${filterData.radius} ${filterData.price} ${filterData.foodTypes}")
             intent = Intent(this, TournamentActivity::class.java)
             val gson = Gson()
@@ -174,7 +172,7 @@ class FilterPage : AppCompatActivity() {
         ) {
             // updated continuously as the user slides the thumb
             distanceTextView.setText("Distance: $progress")
-            radius = progress
+            filterData.radius = progress
         }
 
         override fun onStartTrackingTouch(seekBar: SeekBar) {

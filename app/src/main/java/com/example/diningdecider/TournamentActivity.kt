@@ -1,6 +1,7 @@
 package com.example.diningdecider
 
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -8,7 +9,7 @@ import android.widget.ImageButton
 import android.widget.TextView
 import com.google.gson.Gson
 
-
+val FavArrayList = ArrayList<Restaurant>()
 
 class TournamentActivity : AppCompatActivity() {
     private lateinit var tournament : Tournament
@@ -82,9 +83,13 @@ class TournamentActivity : AppCompatActivity() {
         }
         fav1Button.setOnClickListener{view: View->
             setFavorite(restaurant1, fav1Button)
+            FavArrayList.add(restaurant1)
+
         }
         fav2Button.setOnClickListener{view: View->
             setFavorite(restaurant2, fav2Button)
+            FavArrayList.add(restaurant2)
+
         }
         backButton.setOnClickListener {
             intent = Intent(this, HomePage::class.java)
@@ -163,6 +168,7 @@ class TournamentActivity : AppCompatActivity() {
         if (restaurant.favorite == true){
             restaurant.favorite = false
             button.setImageResource(R.drawable.heart)
+
         }
         else if (restaurant.favorite == false){
             restaurant.favorite = true
@@ -178,6 +184,8 @@ class TournamentActivity : AppCompatActivity() {
             button.setImageResource(R.drawable.heart)
         }
     }
+
+
 
 
 

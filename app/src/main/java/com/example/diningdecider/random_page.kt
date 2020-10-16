@@ -9,6 +9,7 @@ import android.widget.Button
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import com.google.gson.Gson
 
 class random_page : AppCompatActivity() {
 
@@ -20,34 +21,36 @@ class random_page : AppCompatActivity() {
     private lateinit var resName: TextView
     private lateinit var resImage: ImageView
     private lateinit var resInfo: TextView
+    private lateinit var filters : FilterData
+    private lateinit var restaurant: Restaurant
+    private var resIndex: Int =0
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_random_page)
 
+        var json = intent.getStringExtra("Filters")
+        val gson = Gson()
+        var bundle = gson.fromJson(json, FilterData::class.java)
+        this.filters = bundle
+        tournament = Tournament(filters)
 
-        //Random Screen Buttons associated with their XML IDS
-        //dineButton = findViewById(R.id.button3)
         newButton = findViewById(R.id.NEWbutton)
         backButton = findViewById(R.id.backButton)
         resName = findViewById(R.id.RestaurantName)
         resImage = findViewById(R.id.RestaurantImage)
         resInfo = findViewById(R.id.info)
-        tournament = Tournament(null)
 
         //randomize options to begin with
-        randomizeOption();
+        resIndex = tournament.getNewRandomRestaurant()
+        restaurant = tournament.restaurants.get(resIndex)
 
-//        //Random Screen - What to set the dine button to? and edit new button
-//        dineButton.setOnClickListener {
-//            intent = Intent(this, WinnerPage::class.java)
-//            startActivity(intent)
-//        }
+        set()
 
         //randomize options after clicking
         newButton.setOnClickListener {
-            randomizeOption();
+            setNext();
         }
 
         backButton.setOnClickListener {
@@ -56,13 +59,30 @@ class random_page : AppCompatActivity() {
         }
     }
 
-    private fun randomizeOption(){
-        var newrestaurant = tournament.getNewRandomRestaurant()
 
-        resImage.setImageResource(newrestaurant.imageID)
-        resName.setText(newrestaurant.name)
-        resInfo.setText(newrestaurant.address)
+
+
+
+    private fun setNext(){
+
+        if (resIndex == tournament.restaurants.size -1){
+            resIndex = 0;
+            restaurant = tournament.restaurants[resIndex]
+        }
+        else{
+            resIndex++
+            restaurant = tournament.restaurants[resIndex]
+        }
+        set()
     }
+    //lets send it
+    private fun set(){
+        resImage.setImageResource(restaurant.imageID)
+        resName.setText(restaurant.name)
+        resInfo.setText(restaurant.address)
+    }
+
+
 
 
 }
