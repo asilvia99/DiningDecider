@@ -11,12 +11,12 @@ public class Restaurant {
     String phonenumber;
     int distance;
     Price pricelevel;
-    ArrayList<FoodType> foodTypes;
+    FoodType foodTypes;
     public int imageID;
     Boolean favorite;
     Boolean pastWinner;
 
-    public Restaurant(String name, String address, String phonenumber, int distance, Price pricelevel, ArrayList<FoodType> foodTypes, int imageID) {
+    public Restaurant(String name, String address, String phonenumber, int distance, Price pricelevel, FoodType foodTypes, int imageID) {
         this.name = name;
         this.address = address;
         this.phonenumber = phonenumber;
