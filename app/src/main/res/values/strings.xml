@@ -2,8 +2,8 @@
     <string name="app_name">DiningDecider</string>
     <string name="filter_title">INPUT YOUR FILTERS</string>
     <string name="distance_heading">Distance: 10</string>
-    <string name="price_heading">Price</string>
-    <string name="category_heading">Categories</string>
+    <string name="price_heading">Price (Optional)</string>
+    <string name="category_heading">Categories (Optional)</string>
     <string name="random_choose">CHOOSE FOR ME</string>
     <string name="tournament_choose">HELP ME DECIDE</string>
     <string name="chinese_category">Chinese</string>
