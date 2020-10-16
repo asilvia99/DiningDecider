@@ -27,6 +27,7 @@ class FilterPage : AppCompatActivity() {
     private lateinit var indianCheckBox: CheckBox
     private lateinit var mexicanCheckBox: CheckBox
     private lateinit var thaiCheckBox: CheckBox
+    private lateinit var backButton : ImageButton
 
 
     private var radius: Int = 10
@@ -42,6 +43,7 @@ class FilterPage : AppCompatActivity() {
         //Filter Screen Buttons
         chooseForMeButton = findViewById(R.id.randomButton)
         helpMeButton = findViewById(R.id.tournamentButton)
+        backButton = findViewById(R.id.backImageButton)
         distanceSeekBar = findViewById(R.id.distanceSeekBar)
         distanceSeekBar.setOnSeekBarChangeListener(seekBarChangeListener)
         price1Button = findViewById(R.id.price1ImageButton)
@@ -56,6 +58,11 @@ class FilterPage : AppCompatActivity() {
 
         distanceTextView = findViewById(R.id.distance_textView)
         distanceTextView.setText("Distance: 10")
+
+        backButton.setOnClickListener{
+            intent = Intent(this, HomePage::class.java)
+            startActivity(intent)
+        }
 
         // Filter for only getting restaurants with low price
         price1Button.setOnClickListener {
