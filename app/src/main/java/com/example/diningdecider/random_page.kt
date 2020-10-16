@@ -75,6 +75,7 @@ class random_page : AppCompatActivity() {
         }
         set()
     }
+    //lets send it
     private fun set(){
         resImage.setImageResource(restaurant.imageID)
         resName.setText(restaurant.name)
