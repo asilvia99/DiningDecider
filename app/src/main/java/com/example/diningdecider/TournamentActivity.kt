@@ -13,6 +13,8 @@ val FavArrayList = ArrayList<Restaurant>()
 
 class TournamentActivity : AppCompatActivity() {
     private lateinit var tournament : Tournament
+    private var favsList: ArrayList<Restaurant> = ArrayList()
+
     private lateinit var filters: FilterData
     private lateinit var restaurant1: Restaurant
     private lateinit var restaurant2: Restaurant
@@ -102,6 +104,7 @@ class TournamentActivity : AppCompatActivity() {
              * show winner screen
              */
             if (r == this.tournament.rounds.size -1){
+                saveFavorites()
                 val intent = Intent(this, WinnerPage::class.java)
                 val gson = Gson()
                 val json = gson.toJson(winner)
@@ -159,11 +162,15 @@ class TournamentActivity : AppCompatActivity() {
     private fun setFavorite(restaurant:Restaurant, button : ImageButton){
         if (restaurant.favorite == true){
             restaurant.favorite = false
+            if (favsList.contains(restaurant)){
+                favsList.remove(restaurant)
+            }
             button.setImageResource(R.drawable.heart)
 
         }
         else if (restaurant.favorite == false){
             restaurant.favorite = true
+            favsList.add(restaurant)
             button.setImageResource(R.drawable.heartfilled)
         }
 
@@ -175,6 +182,15 @@ class TournamentActivity : AppCompatActivity() {
         else if (restaurant.favorite == false){
             button.setImageResource(R.drawable.heart)
         }
+    }
+
+    private fun saveFavorites(){
+        var sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE)
+        var editor = sharedPreferences.edit()
+        var gson = Gson()
+        var json = gson.toJson(favsList)
+        editor.putString("favs list", json)
+        editor.apply()
     }
 
 
