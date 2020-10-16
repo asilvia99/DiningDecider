@@ -9,7 +9,9 @@ import android.provider.ContactsContract
 import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import com.google.gson.Gson
+import kotlinx.android.synthetic.main.activity_random_page.*
 
 class WinnerPage : AppCompatActivity() {
 
@@ -17,6 +19,7 @@ class WinnerPage : AppCompatActivity() {
     private lateinit var resImg : ImageView
     private lateinit var resName : TextView
     private lateinit var backButton: ImageButton
+    private lateinit var favButton: ImageButton
     private lateinit var callButton: ImageButton
     private lateinit var directionsButton: ImageButton
     private lateinit var finishButton:ImageButton
@@ -34,8 +37,15 @@ class WinnerPage : AppCompatActivity() {
         this.winner = bundle
         resName = findViewById(R.id.wp_name)
         resImg = findViewById(R.id.wp_img)
+        favButton = findViewById(R.id.wp_favButton1)
+
+
+
         resImg.setImageResource(winner.imageID)
         resName.setText(winner.name)
+        setInitFavButtons()
+
+
 
 
         //Winner Screen Buttons
@@ -72,5 +82,29 @@ class WinnerPage : AppCompatActivity() {
             startActivity(intent)
         }
 
+        favButton.setOnClickListener{
+            setFavorite()
+        }
+
+
+    }
+    private fun setFavorite(){
+        if (winner.favorite == true){
+            winner.favorite = false
+            favButton.setImageResource(R.drawable.heart)
+        }
+        else if (winner.favorite == false){
+            winner.favorite = true
+            favButton.setImageResource(R.drawable.heartfilled)
+        }
+
+    }
+    private fun setInitFavButtons(){
+        if (winner.favorite == true){
+            favButton.setImageResource(R.drawable.heartfilled)
+        }
+        else if (winner.favorite == false){
+            favButton.setImageResource(R.drawable.heart)
+        }
     }
 }

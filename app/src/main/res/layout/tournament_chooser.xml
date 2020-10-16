@@ -131,16 +131,16 @@
         >
 
 
-        <ImageButton
-            android:id="@+id/ts_infoButton1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@android:color/white"
-            android:text=" "
-            android:textSize="22dp"
-            android:src = "@drawable/info"
-            android:scaleType="fitCenter"
-            />
+<!--        <ImageButton-->
+<!--            android:id="@+id/ts_infoButton1"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:background="@android:color/white"-->
+<!--            android:text=" "-->
+<!--            android:textSize="22dp"-->
+<!--            android:src = "@drawable/info"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            />-->
 
 
         <ImageButton
@@ -153,18 +153,18 @@
             android:src = "@drawable/heart"
             android:padding="9dp"
             android:scaleType="fitCenter"
-            android:layout_marginLeft="50dp"/>
+            android:layout_marginLeft="110dp"/>
 
-        <ImageButton
-            android:id="@+id/ts_infoButton2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:background="@android:color/white"
-            android:text=" "
-            android:textSize="22dp"
-            android:src = "@drawable/info"
-            android:scaleType="fitCenter"
-            android:layout_marginLeft="50dp"/>
+<!--        <ImageButton-->
+<!--            android:id="@+id/ts_infoButton2"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:background="@android:color/white"-->
+<!--            android:text=" "-->
+<!--            android:textSize="22dp"-->
+<!--            android:src = "@drawable/info"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:layout_marginLeft="50dp"/>-->
 
 
 
@@ -178,7 +178,7 @@
             android:src = "@drawable/heart"
             android:padding="9dp"
             android:scaleType="fitCenter"
-            android:layout_marginLeft="50dp"/>
+            android:layout_marginLeft="140dp"/>
 
 
     </LinearLayout>
