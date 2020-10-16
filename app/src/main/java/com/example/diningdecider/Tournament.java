@@ -37,7 +37,7 @@ public class Tournament {
 
         this.initializeTournament();
 
-        System.out.println("There are " + restaurants.size() + " restarurants");
+        System.out.println("There are " + restaurants.size() + " restaurants");
         for (Restaurant r: restaurants){
             System.out.println(r.name);
         }
@@ -49,7 +49,7 @@ public class Tournament {
      * @param teams
      * @return
      */
-    private boolean isGoodForTournament(int teams){
+    public boolean isGoodForTournament(int teams){
 //        logbase2(#ofteams) must be equal to a whole number
 //        for example, 4, 8, or 16 are appropriate #s of teams
 //        math.log uses base e, so dividing by log(base e) of 2 will give u
