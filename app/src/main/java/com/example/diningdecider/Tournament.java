@@ -135,6 +135,13 @@ public class Tournament {
         Restaurant wendys = new Restaurant("Wendy's", "492 Lincoln St, Worcester, MA", "(508) 852-2120", 16, Price.LOW, FoodType.FastFood, R.drawable.wendys);
         Restaurant kfc = new Restaurant("Kentucky Fried Chicken", "418 Park Ave, Worcester, MA", "(508) 755-5271", 7, Price.LOW, FoodType.FastFood, R.drawable.kfc);
         Restaurant fiveguys = new Restaurant("Five Guys", "525 Lincoln St, Worcester, MA", "(508) 853-2000", 15, Price.HIGH, FoodType.FastFood, R.drawable.fiveguys);
+        //Chinese Food
+        Restaurant wenhing = new Restaurant("Wen Hing", "106 Lincoln St, Worcester, MA", "(508) 753-6399", 12, Price.LOW, FoodType.Chinese, R.drawable.wenhing);
+        Restaurant ddynasty = new Restaurant("Dragon Dynasty", "104 Highland St, Worcester, MA", "(508) 755-5588", 5, Price.LOW, FoodType.Chinese, R.drawable.ddynasty);
+        Restaurant minghouse = new Restaurant("Ming House", "217 Chandler St A, Worcester, MA", "(508) 756-6888", 10, Price.MEDIUM, FoodType.Chinese, R.drawable.minghouse);
+        Restaurant greatwall = new Restaurant("Great Wall", "521 Main St, Worcester, MA", "(508) 799-0803", 15, Price.MEDIUM, FoodType.Chinese, R.drawable.greatwall);
+        Restaurant sakebomb = new Restaurant("Sake Bomb Bistro", "258 Park Ave, Worcester, MA", "(508) 754-2426", 20, Price.MEDIUM, FoodType.Chinese, R.drawable.sakebomb);
+        Restaurant kingchef = new Restaurant("King Chef", "205 Chandler St, Worcester, MA", "(508) 767-0209", 10, Price.LOW, FoodType.Chinese, R.drawable.kingchef);
 
 
         Restaurant redcrab = new Restaurant("Red Crab Juicy Seafood", "1269 Main St, Worcester, MA", "(508) 755-8188", 16, Price.HIGH, FoodType.Seafood, R.drawable.redcrab);
@@ -166,6 +173,15 @@ public class Tournament {
         restaurants.add(wendys);
         restaurants.add(kfc);
         restaurants.add(fiveguys);
+        restaurants.add(wenhing);
+        restaurants.add(ddynasty);
+        restaurants.add(minghouse);
+        restaurants.add(greatwall);
+        restaurants.add(sakebomb);
+        restaurants.add(kingchef);
+
+
+
 
         restaurants.add(redcrab);
         restaurants.add(herbies);
