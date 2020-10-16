@@ -143,6 +143,14 @@ public class Tournament {
         Restaurant sakebomb = new Restaurant("Sake Bomb Bistro", "258 Park Ave, Worcester, MA", "(508) 754-2426", 20, Price.MEDIUM, FoodType.Chinese, R.drawable.sakebomb);
         Restaurant kingchef = new Restaurant("King Chef", "205 Chandler St, Worcester, MA", "(508) 767-0209", 10, Price.LOW, FoodType.Chinese, R.drawable.kingchef);
 
+        //Breakfast Food
+        Restaurant dennys = new Restaurant("Denny's", "494 Lincoln St, Worcester, MA", "(508) 852-8448", 20, Price.LOW, FoodType.Breakfast, R.drawable.dennys);
+        Restaurant dunks = new Restaurant("Dunkin'", "104 Belmont St, Worcester, MA", "(508) 756-3275", 5, Price.LOW, FoodType.Breakfast, R.drawable.dunks);
+        Restaurant bean = new Restaurant("Bean Counter Bakery Cafe", "113 Highland St, Worcester, MA", "(508) 749-5700", 5, Price.MEDIUM, FoodType.Breakfast, R.drawable.bean);
+        Restaurant alteas = new Restaurant("Altea's Eatery", "259 Park Ave, Worcester, MA", "(508) 767-1639", 5, Price.MEDIUM, FoodType.Breakfast, R.drawable.alteas);
+        Restaurant bagel = new Restaurant("Bagel Time", "194 Park Ave, Worcester, MA", "(508) 798-0440", 5, Price.LOW, FoodType.Breakfast, R.drawable.bagel);
+        Restaurant ralphs = new Restaurant("Ralph's Diner", "148 Grove St, Worcester, MA", "(508) 753-9543", 5, Price.MEDIUM, FoodType.Breakfast, R.drawable.ralphs);
+
 
         Restaurant redcrab = new Restaurant("Red Crab Juicy Seafood", "1269 Main St, Worcester, MA", "(508) 755-8188", 16, Price.HIGH, FoodType.Seafood, R.drawable.redcrab);
         Restaurant herbies = new Restaurant("Herbie's", "1028 Southbridge St, Worcester, MA", "(508) 757-5083", 10, Price.MEDIUM, FoodType.Seafood, R.drawable.herbies);
@@ -188,7 +196,15 @@ public class Tournament {
         restaurants.add(greatwall);
         restaurants.add(sakebomb);
         restaurants.add(kingchef);
-
+        restaurants.add(dennys);
+        restaurants.add(dunks);
+        restaurants.add(boynton);
+        restaurants.add(sole);
+        restaurants.add(oakbt);
+        restaurants.add(alteas);
+        restaurants.add(bean);
+        restaurants.add(bagel);
+        restaurants.add(ralphs);
 
 
 
