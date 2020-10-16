@@ -153,6 +153,15 @@ public class Tournament {
         Restaurant baba = new Restaurant("Baba Sushi", "309 Park Ave, Worcester, MA", "(508) 752-8822", 15, Price.HIGH, FoodType.Seafood, R.drawable.baba);
 
 
+        Restaurant quinns = new Restaurant("Quinns Irish Pub", "715 W Boylston St, Worcester, MA", "(508) 459-2025", 16, Price.MEDIUM, FoodType.Pub, R.drawable.quinns);
+        Restaurant hangover = new Restaurant("The Hangover Pub", "102 Green St, Worcester, MA", "(508) 459-1511", 10, Price.MEDIUM, FoodType.Pub, R.drawable.hangover);
+        Restaurant funky = new Restaurant("Funky Murphy's", "305 Shrewsbury St, Worcester, MA", "(508) 753-2995", 2, Price.HIGH, FoodType.Pub, R.drawable.funky);
+        Restaurant gallaghers = new Restaurant("Gallaghers", "97 West Boylston St, Worcester, MA", "(508) 755-4451", 10, Price.LOW, FoodType.Pub, R.drawable.gall);
+        Restaurant leits = new Restaurant("Leitrum's Pub", "265 Park Ave, Worcester, MA", "(508) 854-2999", 16, Price.LOW, FoodType.Pub, R.drawable.leits);
+        Restaurant oconnors = new Restaurant("O'Connor's Restaurant and Bar", "1160 W Boylston St, Worcester, MA", "(508) 853-0789", 7, Price.LOW, FoodType.Pub, R.drawable.ocon);
+
+
+
         restaurants = new ArrayList<>();
         restaurants.add(chickfila);
         restaurants.add(chipotle);
@@ -191,6 +200,12 @@ public class Tournament {
         restaurants.add(foley);
         restaurants.add(baba);
 
+        restaurants.add(quinns);
+        restaurants.add(hangover);
+        restaurants.add(oconnors);
+        restaurants.add(leits);
+        restaurants.add(funky);
+        restaurants.add(gallaghers);
 
 
 
