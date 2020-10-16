@@ -100,9 +100,9 @@ public class Tournament {
     public void makeRestaurants(){
 
         Restaurant chickfila = new Restaurant("Chick Fil-a", "80 Gold Star Blvd","508-459-9852",15,Price.LOW, FoodType.FastFood , R.drawable.chickfila);
-        Restaurant chipotle = new Restaurant("Chipotle","49 Park Ave Suite 1", "774-420-7718", 15, Price.LOW, FoodType.Mexican, R.drawable.chipotle);
+        Restaurant chipotle = new Restaurant("Chipotle","49 Park Ave Suite 1", "774-420-7718", 15, Price.LOW, FoodType.FastFood, R.drawable.chipotle);
         Restaurant mcdonalds = new Restaurant("McDonalds", "465 Shrewsbury St", "508-757-9996", 15, Price.LOW, FoodType.FastFood, R.drawable.mcdonalds);
-        Restaurant tacobell = new Restaurant("Taco Bell", "463 Lincoln St", "774-701-1580", 15, Price.LOW, FoodType.Mexican, R.drawable.tacobell);
+        Restaurant tacobell = new Restaurant("Taco Bell", "463 Lincoln St", "774-701-1580", 15, Price.LOW, FoodType.FastFood, R.drawable.tacobell);
         Restaurant burgerking = new Restaurant("Burger King", "163 Madison St", "508-752-7952", 15, Price.LOW, FoodType.FastFood, R.drawable.burgerking);
         Restaurant thefix = new Restaurant("The Fix Burger Bar", "108 Grove St", "774-823-3327", 15, Price.MEDIUM, FoodType.Burgers, R.drawable.fix);
         Restaurant mezcal = new Restaurant("MezCal Tequila Cantina", "30 Major Taylor Blvd", "508-926-8308", 15, Price.MEDIUM, FoodType.Mexican, R.drawable.mezcal);
@@ -111,7 +111,16 @@ public class Tournament {
         Restaurant boynton = new Restaurant("The Boynton Restaurant & Spirits", "117 Highland St", "508-756-8458", 15, Price.MEDIUM, FoodType.Pub, R.drawable.boynton );
         Restaurant sole = new Restaurant("The Sole Proprietor", "118 Highland St", "508-798-3474", 15, Price.HIGH, FoodType.Seafood, R.drawable.sole );
         Restaurant oakbt = new Restaurant("Oak Barrel Tavern", "229 Grove St", "508-755-8047", 15, Price.MEDIUM, FoodType.Pub, R.drawable.oak);
-
+        Restaurant elpatron = new Restaurant("El Patron", "192 Harding St, Worcester, MA", "(508) 757-8000", 5, Price.MEDIUM, FoodType.Mexican, R.drawable.elpatron);
+        Restaurant mexicali = new Restaurant("Mexicali Cantina Grill", "225 Shrewsbury St, Worcester, MA", "(508) 926-8811", 10, Price.MEDIUM, FoodType.Mexican, R.drawable.mexicali);
+        Restaurant solofmexico = new Restaurant("Sol of Mexico", "538 Pleasant St, Worcester, MA", "(508) 756 2660", 1, Price.LOW, FoodType.Mexican, R.drawable.solofmex);
+        Restaurant tacosmexico = new Restaurant("Tacos Mexico", "7 Neponset St, Worcester, MA", "(508) 579-3283", 16, Price.LOW, FoodType.Mexican, R.drawable.tacosmexico);
+        Restaurant pepes = new Restaurant("Pepe's Taqueria", "645 Chandler St, Worcester, MA", "(508) 796-5796", 10, Price.MEDIUM, FoodType.Mexican, R.drawable.pepes);
+        Restaurant dostacos = new Restaurant("Dos Tacos Cafe", "296 Pleasant St, Worcester, MA", "(508) 767-0075", 2, Price.LOW, FoodType.Mexican, R.drawable.dostacos);
+        Restaurant moes = new Restaurant("Moes Southwest Grill", "3 Stafford St, Worcester, MA", "(508) 459-6060", 10, Price.LOW, FoodType.Mexican, R.drawable.moes);
+        Restaurant wendys = new Restaurant("Wendy's", "492 Lincoln St, Worcester, MA", "(508) 852-2120", 16, Price.LOW, FoodType.FastFood, R.drawable.wendys);
+        Restaurant kfc = new Restaurant("Kentucky Fried Chicken", "418 Park Ave, Worcester, MA", "(508) 755-5271", 7, Price.LOW, FoodType.FastFood, R.drawable.kfc);
+        Restaurant fiveguys = new Restaurant("Five Guys", "525 Lincoln St, Worcester, MA", "(508) 853-2000", 15, Price.HIGH, FoodType.FastFood, R.drawable.fiveguys);
 
 
         restaurants = new ArrayList<>();
@@ -124,6 +133,17 @@ public class Tournament {
         restaurants.add(mezcal);
         restaurants.add(panera);
 //        restaurants.add(nu);
+//        restaurants.add(elpatron);
+//        restaurants.add(mexicali);
+//        restaurants.add(solofmexico);
+//        restaurants.add(tacosmexico);
+//        restaurants.add(pepes);
+//        restaurants.add(dostacos);
+//        restaurants.add(moes);
+//        restaurants.add(wendys);
+//        restaurants.add(kfc);
+//        restaurants.add(fiveguys);
+
 
 
 
