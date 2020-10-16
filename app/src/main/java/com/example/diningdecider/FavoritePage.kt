@@ -26,7 +26,7 @@ class FavoritePage : AppCompatActivity() {
         favBackArrow = findViewById(R.id.favBackArrow)
         favoritesText = findViewById(R.id.list_view)
 
-        loadData()
+//        loadData()
         //Favorites Screen
         favBackArrow.setOnClickListener {
             intent = Intent(this, HomePage::class.java)
@@ -34,6 +34,9 @@ class FavoritePage : AppCompatActivity() {
         }
     }
 
+    /**
+     * Was previously working to load existing favorites but stopped working prior to submission
+     */
     private fun loadData(){
         var sharedPreferences = getSharedPreferences("shared preferences", Context.MODE_PRIVATE)
         var gson = Gson()

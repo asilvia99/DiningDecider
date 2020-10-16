@@ -104,7 +104,7 @@ class TournamentActivity : AppCompatActivity() {
              * show winner screen
              */
             if (r == this.tournament.rounds.size -1){
-                saveFavorites()
+//                saveFavorites()
                 val intent = Intent(this, WinnerPage::class.java)
                 val gson = Gson()
                 val json = gson.toJson(winner)
