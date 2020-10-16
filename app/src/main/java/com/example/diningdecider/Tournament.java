@@ -69,23 +69,16 @@ public class Tournament {
 
     public void filterRestaurants(FilterData filters){
         ArrayList<Restaurant> eligibleRestaurants = new ArrayList<>();
-        eligibleRestaurants = restaurants;
 
         int size = eligibleRestaurants.size();
-        for(int i = 0; i < (size-1); i--) {
-            Restaurant current = eligibleRestaurants.get(i);
-            if(current.distance > filters.radius) {
-                eligibleRestaurants.remove(i);
-            }
+        for(int i = 0; i < (size-1); i++) {
 
-            if(!current.pricelevel.equals(filters.price)) {
-                eligibleRestaurants.remove(i);
+            Restaurant current = restaurants.get(i);
+            if(current.distance <= filters.radius && current.pricelevel.equals(filters.price) && filters.foodTypes.equals(FoodType.None)) {
+                eligibleRestaurants.add(current);
             }
-
-            if(!filters.foodTypes.equals(FoodType.None)) {
-                if(!filters.foodTypes.contains(current.foodTypes)) {
-                    eligibleRestaurants.remove(i);
-                }
+            else if(current.distance <= filters.radius && current.pricelevel.equals(filters.price) && filters.foodTypes.contains(current.foodTypes)) {
+                eligibleRestaurants.add(current);
             }
 
         }
