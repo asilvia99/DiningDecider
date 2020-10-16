@@ -8,10 +8,10 @@ public enum FoodType {
     Pub,
     Chinese,
     FastFood,
-    Thai,
+    Thai, //remove
     Mexican,
-    Burgers,
-    Indian,
+    Burgers, //remove
+    Indian, //remove
     Seafood
 
 }
