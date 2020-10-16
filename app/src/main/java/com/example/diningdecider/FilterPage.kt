@@ -2,6 +2,7 @@ package com.example.diningdecider
 
 import android.R.attr.button
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -58,6 +59,7 @@ class FilterPage : AppCompatActivity() {
 
         distanceTextView = findViewById(R.id.distance_textView)
         distanceTextView.setText("Distance: 10")
+        fillAllMoneyButtons()
 
         backButton.setOnClickListener{
             intent = Intent(this, HomePage::class.java)
@@ -67,16 +69,19 @@ class FilterPage : AppCompatActivity() {
         // Filter for only getting restaurants with low price
         price1Button.setOnClickListener {
             price = Price.LOW
+            highlightMoneyButtons(price1Button)
         }
 
         // Filter for only getting restaurants with medium price
         price2Button.setOnClickListener {
             price = Price.MEDIUM
+            highlightMoneyButtons(price2Button)
         }
 
         // Filter for only getting restaurants with high price
         price3Button.setOnClickListener {
             price = Price.HIGH
+            highlightMoneyButtons(price3Button)
         }
 
         fastfoodCheckBox.setOnCheckedChangeListener { buttonView, isChecked ->
@@ -180,6 +185,17 @@ class FilterPage : AppCompatActivity() {
         override fun onStopTrackingTouch(seekBar: SeekBar) {
             // called after the user finishes moving the SeekBar
         }
+    }
+
+
+    private fun highlightMoneyButtons(highlightButton: ImageButton){
+       fillAllMoneyButtons()
+        highlightButton.setBackgroundColor(Color.parseColor("#AFAFAF"))
+    }
+    private fun fillAllMoneyButtons(){
+        price1Button.setBackgroundColor(Color.parseColor("#E0E0E0"))
+        price2Button.setBackgroundColor(Color.parseColor("#E0E0E0"))
+        price3Button.setBackgroundColor(Color.parseColor("#E0E0E0"))
     }
 
     /**

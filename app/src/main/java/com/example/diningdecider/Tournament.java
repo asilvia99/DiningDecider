@@ -98,30 +98,19 @@ public class Tournament {
      * creates dummy data for the tournament
      */
     public void makeRestaurants(){
-        ArrayList a = new ArrayList<FoodType>();
-        a.add(FoodType.FastFood);
-        ArrayList b = new ArrayList<FoodType>();
-        b.add(FoodType.Burgers);
-        ArrayList c = new ArrayList<FoodType>();
-        c.add(FoodType.Mexican);
-        ArrayList d = new ArrayList<FoodType>();
-        ArrayList e = new ArrayList<FoodType>();
-        e.add(FoodType.Pub);
-        ArrayList f = new ArrayList<FoodType>();
-        f.add(FoodType.Seafood);
 
-        Restaurant chickfila = new Restaurant("Chick Fil-a", "80 Gold Star Blvd","508-459-9852",15,Price.LOW, a , R.drawable.chickfila);
-        Restaurant chipotle = new Restaurant("Chipotle","49 Park Ave Suite 1", "774-420-7718", 15, Price.LOW, a, R.drawable.chipotle);
-        Restaurant mcdonalds = new Restaurant("McDonalds", "465 Shrewsbury St", "508-757-9996", 15, Price.LOW, a, R.drawable.mcdonalds);
-        Restaurant tacobell = new Restaurant("Taco Bell", "463 Lincoln St", "774-701-1580", 15, Price.LOW, a, R.drawable.tacobell);
-        Restaurant burgerking = new Restaurant("Burger King", "163 Madison St", "508-752-7952", 15, Price.LOW, a, R.drawable.burgerking);
-        Restaurant thefix = new Restaurant("The Fix Burger Bar", "108 Grove St", "774-823-3327", 15, Price.MEDIUM, b, R.drawable.fix);
-        Restaurant mezcal = new Restaurant("MezCal Tequila Cantina", "30 Major Taylor Blvd", "508-926-8308", 15, Price.MEDIUM, c, R.drawable.mezcal);
-        Restaurant panera = new Restaurant("Panera Bread", "120 Gold Star Blvd", "508-856-7007", 15, Price.MEDIUM, d, R.drawable.panera);
-//        Restaurant nu = new Restaurant("Nu Kitchen", "335 Chandler St", "508-926-8800", 15, Price.MEDIUM, d, R.drawable.nu);
-//        Restaurant boynton = new Restaurant("The Boynton Restaurant & Spirits", "117 Highland St", "508-756-8458", 15, Price.MEDIUM,e, R.drawable.boynton );
-//        Restaurant sole = new Restaurant("The Sole Proprietor", "118 Highland St", "508-798-3474", 15, Price.HIGH,f, R.drawable.sole );
-//        Restaurant oakbt = new Restaurant("Oak Barrel Tavern", "229 Grove St", "508-755-8047", 15, Price.MEDIUM, e, R.drawable.oak);
+        Restaurant chickfila = new Restaurant("Chick Fil-a", "80 Gold Star Blvd","508-459-9852",15,Price.LOW, FoodType.FastFood , R.drawable.chickfila);
+        Restaurant chipotle = new Restaurant("Chipotle","49 Park Ave Suite 1", "774-420-7718", 15, Price.LOW, FoodType.Mexican, R.drawable.chipotle);
+        Restaurant mcdonalds = new Restaurant("McDonalds", "465 Shrewsbury St", "508-757-9996", 15, Price.LOW, FoodType.FastFood, R.drawable.mcdonalds);
+        Restaurant tacobell = new Restaurant("Taco Bell", "463 Lincoln St", "774-701-1580", 15, Price.LOW, FoodType.Mexican, R.drawable.tacobell);
+        Restaurant burgerking = new Restaurant("Burger King", "163 Madison St", "508-752-7952", 15, Price.LOW, FoodType.FastFood, R.drawable.burgerking);
+        Restaurant thefix = new Restaurant("The Fix Burger Bar", "108 Grove St", "774-823-3327", 15, Price.MEDIUM, FoodType.Burgers, R.drawable.fix);
+        Restaurant mezcal = new Restaurant("MezCal Tequila Cantina", "30 Major Taylor Blvd", "508-926-8308", 15, Price.MEDIUM, FoodType.Mexican, R.drawable.mezcal);
+        Restaurant panera = new Restaurant("Panera Bread", "120 Gold Star Blvd", "508-856-7007", 15, Price.MEDIUM, null, R.drawable.panera);
+        Restaurant nu = new Restaurant("Nu Kitchen", "335 Chandler St", "508-926-8800", 15, Price.MEDIUM, null, R.drawable.nu);
+        Restaurant boynton = new Restaurant("The Boynton Restaurant & Spirits", "117 Highland St", "508-756-8458", 15, Price.MEDIUM, FoodType.Pub, R.drawable.boynton );
+        Restaurant sole = new Restaurant("The Sole Proprietor", "118 Highland St", "508-798-3474", 15, Price.HIGH, FoodType.Seafood, R.drawable.sole );
+        Restaurant oakbt = new Restaurant("Oak Barrel Tavern", "229 Grove St", "508-755-8047", 15, Price.MEDIUM, FoodType.Pub, R.drawable.oak);
 
 
 
