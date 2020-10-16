@@ -21,7 +21,7 @@ public class TournamentsTest {
         testTournament.makeRestaurants();
         int restaurntsSize = testTournament.restaurants.size();
 
-        assertEquals(restaurntsSize, 19);
+        assertEquals(restaurntsSize, 47);
     }
 
     @Test
