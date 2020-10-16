@@ -100,11 +100,12 @@ public class Tournament {
 
 
 
-    public Restaurant getNewRandomRestaurant(){
+    public int getNewRandomRestaurant(){
         Random rand = new Random();
         int r = rand.nextInt(this.restaurants.size()-1);
-        return this.restaurants.get(r);
+        return r;
     }
+
 
 
     /**
